@@ -1,0 +1,18 @@
+.error {
+    color: #8B0000;
+    background: #FA8072;
+    border-color: #f5c6cb;
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.success {
+    color: #155724;
+    background: #d4edda;
+    border-color: #c3e6cb;
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
