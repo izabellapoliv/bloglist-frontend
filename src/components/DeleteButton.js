@@ -1,7 +1,7 @@
 import React from 'react'
 import blogService from '../services/blogs'
 
-const DeleteButton = ({ blog, blogs, setBlogs, setNotification, user }) => {
+const DeleteButton = ({ blog, blogs, setBlogs, setNotification }) => {
     const handleDeleteBlog = async (event) => {
         event.preventDefault()
         if (window.confirm(`Do you really want to remove ${blog.title} by ${blog.author}??`)) {
@@ -23,7 +23,7 @@ const DeleteButton = ({ blog, blogs, setBlogs, setNotification, user }) => {
     }
 
     return (
-        <button className="btn text-danger btn-sm btn-link float-end"
+        <button className="btn text-danger btn-sm btn-link float-end btn-delete-blog"
             onClick={handleDeleteBlog}>Delete</button>
     )
 }

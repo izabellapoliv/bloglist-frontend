@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import loginService from '../services/login'
 
 const Login = ({ setUser, setToken, setNotification }) => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
     const handleLogin = async (event) => {
         event.preventDefault()
@@ -20,8 +20,8 @@ const Login = ({ setUser, setToken, setNotification }) => {
             setUser(user)
             setToken(user.token)
 
-            setUsername('');
-            setPassword('');
+            setUsername('')
+            setPassword('')
             setNotification({ class: 'success', message: 'Logged in successfully' })
         } catch (exception) {
             setNotification({ class: 'danger', message: 'Incorrect credentials' })
@@ -36,17 +36,20 @@ const Login = ({ setUser, setToken, setNotification }) => {
         <div className="form-signin">
             <form onSubmit={handleLogin}>
                 <div className="form-floating">
-                    <input type="text" className="form-control" name="username"
+                    <input type="text" className="form-control"
+                        id="username" name="username"
                         onChange={(event) => setUsername(event.target.value)} />
                     <label>username</label>
                 </div>
                 <div className="form-floating">
-                    <input type="password" className="form-control" name="password"
+                    <input type="password" className="form-control"
+                        id="password" name="password"
                         onChange={(event) => setPassword(event.target.value)} />
                     <label>password</label>
                 </div>
                 <br />
-                <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <button type="submit" className="w-100 btn btn-lg btn-primary"
+                    id="signin-button">Sign in</button>
             </form>
         </div>
     )

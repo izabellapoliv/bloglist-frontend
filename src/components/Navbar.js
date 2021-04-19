@@ -10,7 +10,8 @@ const Navbar = ({ user, logout }) => (
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
-                <button className="btn btn-outline-success pull-right" type="button"
+                <button className="btn btn-outline-success pull-right"
+                    id="signout-button" type="button"
                     onClick={logout}>Sign out</button>
             </div>
         </div>
